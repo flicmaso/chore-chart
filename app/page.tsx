@@ -130,42 +130,42 @@ export default function Home() {
         return (
                 <div style={{ minHeight: '100vh', background: '#0f0f0f', padding: '24px', fontFamily: 'system-ui, sans-serif' }}>
                           <div style={{ maxWidth: '680px', margin: '0 auto' }}>
-                                      <h1 style={{ textAlign: 'center', color: '#fff', fontSize: '2rem', fontWeight: 800, marginBottom: '8px' }}>Chore Chart</h1>h1>
-                                      <p style={{ textAlign: 'center', color: '#666', marginBottom: '32px' }}>Week: {wk}</p>p>
+                                      <h1 style={{ textAlign: 'center', color: '#fff', fontSize: '2rem', fontWeight: 800, marginBottom: '8px' }}>Chore Chart</h1>
+                                      <p style={{ textAlign: 'center', color: '#666', marginBottom: '32px' }}>Week: {wk}</p>
                                       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '28px' }}>
                                                     <button onClick={() => setView('mason')} style={{ background: '#1a1a1a', border: `2px solid ${MC}`, borderRadius: '16px', padding: '28px 20px', cursor: 'pointer', textAlign: 'center' }}>
-                                                                    <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>🏈</div>div>
-                                                                    <h2 style={{ color: MC, fontSize: '1.3rem', fontWeight: 700, marginBottom: '6px' }}>Mason</h2>h2>
-                                                                    <p style={{ color: '#fff', fontWeight: 600, marginBottom: '12px' }}>{mDone} / 25</p>p>
+                                                                    <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>🏈</div>
+                                                                    <h2 style={{ color: MC, fontSize: '1.3rem', fontWeight: 700, marginBottom: '6px' }}>Mason</h2>
+                                                                    <p style={{ color: '#fff', fontWeight: 600, marginBottom: '12px' }}>{mDone} / 25</p>
                                                                     <div style={{ background: '#333', borderRadius: '99px', height: '8px', overflow: 'hidden' }}>
                                                                                       <div style={{ width: `${(mDone / 25) * 100}%`, background: MC, height: '100%', borderRadius: '99px' }} />
-                                                                    </div>div>
-                                                                    <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '8px' }}>Pack Attack</p>p>
-                                                    </button>button>
+                                                                    </div>
+                                                                    <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '8px' }}>Pack Attack</p>
+                                                    </button>
                                                     <button onClick={() => setView('shannon')} style={{ background: '#1a1a1a', border: `2px solid ${SC}`, borderRadius: '16px', padding: '28px 20px', cursor: 'pointer', textAlign: 'center' }}>
-                                                                    <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>🏆</div>div>
-                                                                    <h2 style={{ color: SC, fontSize: '1.3rem', fontWeight: 700, marginBottom: '6px' }}>Shannon</h2>h2>
-                                                                    <p style={{ color: '#fff', fontWeight: 600, marginBottom: '12px' }}>{sDone} / 25</p>p>
+                                                                    <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>🏆</div>
+                                                                    <h2 style={{ color: SC, fontSize: '1.3rem', fontWeight: 700, marginBottom: '6px' }}>Shannon</h2>
+                                                                    <p style={{ color: '#fff', fontWeight: 600, marginBottom: '12px' }}>{sDone} / 25</p>
                                                                     <div style={{ background: '#333', borderRadius: '99px', height: '8px', overflow: 'hidden' }}>
                                                                                       <div style={{ width: `${(sDone / 25) * 100}%`, background: SC, height: '100%', borderRadius: '99px' }} />
-                                                                    </div>div>
-                                                                    <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '8px' }}>Tofu Titans</p>p>
-                                                    </button>button>
-                                      </div>div>
+                                                                    </div>
+                                                                    <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '8px' }}>Tofu Titans</p>
+                                                    </button>
+                                      </div>
                                       <div style={{ background: '#1a1a1a', borderRadius: '12px', padding: '20px', border: '1px solid #2a2a2a' }}>
-                                                    <h3 style={{ color: '#fff', fontWeight: 700, marginBottom: '14px' }}>Weekly Progress</h3>h3>
+                                                    <h3 style={{ color: '#fff', fontWeight: 700, marginBottom: '14px' }}>Weekly Progress</h3>
                                         {([['Mason', mDone, MC], ['Shannon', sDone, SC]] as [string, number, string][]).map(([name, done, color]) => (
                                 <div key={name} style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
-                                                  <span style={{ color, width: '65px', fontSize: '0.88rem', fontWeight: 600 }}>{name}</span>span>
+                                                  <span style={{ color, width: '65px', fontSize: '0.88rem', fontWeight: 600 }}>{name}</span>
                                                   <div style={{ flex: 1, background: '#333', borderRadius: '99px', height: '10px', overflow: 'hidden' }}>
                                                                       <div style={{ width: `${(done / 25) * 100}%`, background: color, height: '100%', borderRadius: '99px' }} />
-                                                  </div>div>
-                                                  <span style={{ color: '#ccc', width: '40px', textAlign: 'right', fontSize: '0.85rem' }}>{Math.round((done / 25) * 100)}%</span>span>
-                                </div>div>
+                                                  </div>
+                                                  <span style={{ color: '#ccc', width: '40px', textAlign: 'right', fontSize: '0.85rem' }}>{Math.round((done / 25) * 100)}%</span>
+                                </div>
                               ))}
-                                      </div>div>
-                          </div>div>
-                </div>div>
+                                      </div>
+                          </div>
+                </div>
               )
           }
 
@@ -179,43 +179,43 @@ export default function Home() {
         <div style={{ minHeight: '100vh', background: '#0f0f0f', fontFamily: 'system-ui, sans-serif' }}>
                 <div style={{ background: '#141414', borderBottom: '1px solid #2a2a2a', padding: '14px 20px', position: 'sticky', top: 0, zIndex: 10 }}>
                           <div style={{ maxWidth: '680px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                      <button onClick={() => setView('home')} style={{ background: 'none', border: 'none', color: '#888', cursor: 'pointer', fontSize: '0.9rem' }}>← Back</button>button>
-                                      <span style={{ color, fontWeight: 700, fontSize: '1.1rem' }}>{p === 'mason' ? '🏈 Mason' : '🏆 Shannon'}</span>span>
-                                      <button onClick={() => reset(p)} style={{ background: 'none', border: '1px solid #444', color: '#888', cursor: 'pointer', fontSize: '0.78rem', padding: '4px 10px', borderRadius: '8px' }}>Reset</button>button>
-                          </div>div>
-                </div>div>
+                                      <button onClick={() => setView('home')} style={{ background: 'none', border: 'none', color: '#888', cursor: 'pointer', fontSize: '0.9rem' }}>← Back</button>
+                                      <span style={{ color, fontWeight: 700, fontSize: '1.1rem' }}>{p === 'mason' ? '🏈 Mason' : '🏆 Shannon'}</span>
+                                      <button onClick={() => reset(p)} style={{ background: 'none', border: '1px solid #444', color: '#888', cursor: 'pointer', fontSize: '0.78rem', padding: '4px 10px', borderRadius: '8px' }}>Reset</button>
+                          </div>
+                </div>
                 <div style={{ maxWidth: '680px', margin: '0 auto', padding: '20px' }}>
                           <div style={{ background: '#1a1a1a', borderRadius: '10px', padding: '14px 16px', marginBottom: '20px', border: `1px solid ${color}44` }}>
                                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                                                    <span style={{ color: '#666', fontSize: '0.85rem' }}>Week {wk}</span>span>
-                                                    <span style={{ color, fontWeight: 700 }}>{done} / 25</span>span>
-                                      </div>div>
+                                                    <span style={{ color: '#666', fontSize: '0.85rem' }}>Week {wk}</span>
+                                                    <span style={{ color, fontWeight: 700 }}>{done} / 25</span>
+                                      </div>
                                       <div style={{ background: '#333', borderRadius: '99px', height: '8px', overflow: 'hidden' }}>
                                                     <div style={{ width: `${(done / 25) * 100}%`, background: color, height: '100%', borderRadius: '99px' }} />
-                                      </div>div>
-                          </div>div>
+                                      </div>
+                          </div>
                   {Object.entries(grouped).map(([cat, items]) => (
                     <div key={cat} style={{ marginBottom: '20px' }}>
-                                  <h3 style={{ color, fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '10px', paddingLeft: '10px', borderLeft: `3px solid ${color}` }}>{cat}</h3>h3>
+                                  <h3 style={{ color, fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '10px', paddingLeft: '10px', borderLeft: `3px solid ${color}` }}>{cat}</h3>
                                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                                     {items.map(chore => (
                                       <button key={chore.id} onClick={() => toggle(p, chore.id)} style={{ background: chore.done ? `${color}1a` : '#1a1a1a', border: `1px solid ${chore.done ? color : '#2a2a2a'}`, borderRadius: '10px', padding: '12px 14px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '12px', textAlign: 'left' }}>
                                                           <div style={{ width: '20px', height: '20px', borderRadius: '50%', border: `2px solid ${chore.done ? color : '#555'}`, background: chore.done ? color : 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                                            {chore.done && <span style={{ color: '#000', fontSize: '11px', fontWeight: 900 }}>✓</span>span>}
-                                                          </div>div>
-                                                          <span style={{ color: chore.done ? '#666' : '#eee', textDecoration: chore.done ? 'line-through' : 'none', fontSize: '0.92rem' }}>{chore.name}</span>span>
-                                      </button>button>
+                                                            {chore.done && <span style={{ color: '#000', fontSize: '11px', fontWeight: 900 }}>✓</span>}
+                                                          </div>
+                                                          <span style={{ color: chore.done ? '#666' : '#eee', textDecoration: chore.done ? 'line-through' : 'none', fontSize: '0.92rem' }}>{chore.name}</span>
+                                      </button>
                                     ))}
-                                  </div>div>
-                    </div>div>
+                                  </div>
+                    </div>
                   ))}
                   {done === 25 && (
                     <div style={{ textAlign: 'center', padding: '28px', background: `${color}1a`, borderRadius: '12px', border: `1px solid ${color}` }}>
-                                  <div style={{ fontSize: '2.5rem', marginBottom: '8px' }}>🎉</div>div>
-                                  <h2 style={{ color, fontWeight: 800, fontSize: '1.3rem' }}>All done this week!</h2>h2>
-                    </div>div>
+                                  <div style={{ fontSize: '2.5rem', marginBottom: '8px' }}>🎉</div>
+                                  <h2 style={{ color, fontWeight: 800, fontSize: '1.3rem' }}>All done this week!</h2>
+                    </div>
                   )}
-                </div>div>
-        </div>div>
+                </div>
+        </div>
       )
 }
